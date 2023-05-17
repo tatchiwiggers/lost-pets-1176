@@ -1,0 +1,11 @@
+<div class='container mt-5'>
+
+    <h1><%= @pet.name %></h1>
+
+    <ul>
+        <li>Address: <%= @pet.address %></li>
+        <li>Found On: <%= @pet.found_on %></li>
+    </ul>
+
+    <%= link_to "Delete #{@pet.name}", pet_path(@pet), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+</div>
